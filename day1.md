@@ -45,3 +45,6 @@ class Solution:
             fast+=1
         return slow
 ```
+
+
+
