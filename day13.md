@@ -25,6 +25,28 @@
     }
 
 ```
+#### 翻转二叉树
+
+直接对于根节点的两个子树进行翻转，然后得出对应的效果就可以
+
+```CPP
+TreeNode* invertTree(TreeNode* root){
+    if(root ==NULL){return root;}
+    swap(root->left,root->right);
+    invertTree(root->left);
+    invertTree(root->right);
+    return root;
+}
+
+```
+
+#### 对称二叉树
+判断对称二叉树的是说明为镜像的两个节点，并不是左右的两个子节点，所以要分为外侧和里侧的两种情况
+- 函数的参数（对于树来说就是root节点）
+- 函数的终止条件（需要将大部分情况考虑清楚）
+- 函数的单层循环条件（对于左右节点都不为空，并且数值都相同的情况）
+  
+  
 
 
 
